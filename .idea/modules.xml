@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Dots/Dots.iml" filepath="$PROJECT_DIR$/Dots/Dots.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Elipse/Elipse.iml" filepath="$PROJECT_DIR$/Elipse/Elipse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaFX.iml" filepath="$PROJECT_DIR$/JavaFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Praktikum/Praktikum.iml" filepath="$PROJECT_DIR$/Praktikum/Praktikum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Schaufenster/Schaufenster.iml" filepath="$PROJECT_DIR$/Schaufenster/Schaufenster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Training/Training.iml" filepath="$PROJECT_DIR$/Training/Training.iml" />
+    </modules>
+  </component>
+</project>
