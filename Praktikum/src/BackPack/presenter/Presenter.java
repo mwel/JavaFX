@@ -14,7 +14,14 @@ public class Presenter {
         this.view = view;
     }
 
+    public void newCheck(String name, Boolean selected) {
+        model.setSelected(name, selected);
+        view.updateTotalWeight(model.getSumofUsedWeights());
+        view.updateEnabledItems(model.getEnabledItems());
+    }
 
+public void initView() {
 
-
+        view.init(model.getAllItemNames(), model.getAllItemWeights(), model.getMaxWeight());
+}
 }

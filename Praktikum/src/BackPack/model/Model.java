@@ -12,8 +12,10 @@ public class Model {
 
     public Model(String[] names, double[] weights, double maxWeight) {
 
-        for (int i = 0; i < weights.length; i++) {
-            if ((weights[i] > maxWeight) || !(names.length == weights.length)) throw new IllegalArgumentException();
+        if (!(names.length == weights.length)) throw new IllegalArgumentException();
+
+        for (int i = 0; i < names.length; i++) {
+            if (weights[i] > maxWeight) ;
 
             itemList.add(new Item(names[i], weights[i], false));
         }
@@ -61,5 +63,8 @@ public class Model {
             }
         }
         return selectableList;
+    }
+
+    public void setSelected(String name, Boolean selected) {
     }
 }

@@ -1,6 +1,7 @@
 package BackPack.view;
 
 import BackPack.presenter.Presenter;
+import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
@@ -39,20 +40,40 @@ public class View {
 
         for (int i = 0; i < names.size(); i++) {
 
-            CheckBox checkBox = new CheckBox(names.get(i) + " (" + weights.get(i) + " kg)");
+            String currentName = names.get(i);
+            String checkBoxString = currentName + " (" + Double.toString((weights.get(i))) + ")";
+            CheckBox checkBox = new CheckBox(checkBoxString);
+            checkBox.setId(currentName);
+            checkBox.selectedProperty().addListener(new CheckListener(presenter, currentName));
             root.getChildren().add(checkBox);
         }
 
     }
 
+    public void setPresenter(Presenter presenter) {
+        this.presenter = presenter;
+
+    }
+
     public void updateTotalWeight(double total) {
 
-        totalWeightValueLabel.setText("" + total);
+        totalWeightValueLabel.setText("Total Weight; " + Double.toString(total) + " kg");
     }
 
     public void updateEnabledItems(List<String> enabledItems) {
 
+        for (Node n : root.getChildren()) {
+
+            for (String string : enabledItems) {
+
+                if (n.getId().equals(string)) {
+                    n.setDisable(false);
+                    break;
+                }
+
+            }
 
 
+        }
     }
 }

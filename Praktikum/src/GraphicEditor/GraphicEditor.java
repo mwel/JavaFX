@@ -37,7 +37,7 @@ public class GraphicEditor extends Application {
     Insets padding = new Insets(10);
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
 
         root = new VBox(10);
         radioButtonBox = new HBox(10);
